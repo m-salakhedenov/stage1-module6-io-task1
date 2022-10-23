@@ -40,6 +40,8 @@ public class ProfileParser {
                 case "Phone":
                     profile.setPhone(Long.parseLong(keyValue[1]));
                     break;
+                default:
+                    throw new ProfileParseException("Unexpected profile parameter: " + keyValue[0]);
             }
         }
 
